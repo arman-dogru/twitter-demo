@@ -1,7 +1,5 @@
 package com.getir.twitterdemo.config;
 
-import lombok.Builder;
-
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
