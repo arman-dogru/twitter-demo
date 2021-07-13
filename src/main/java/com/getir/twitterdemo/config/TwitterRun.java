@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 @Builder
-public class TwitterService {
+public class TwitterRun {
 
     public static String execute(String arg, int WOEID){
         try {
