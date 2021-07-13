@@ -1,6 +1,6 @@
 package com.getir.twitterdemo.contoller;
 
-import com.getir.twitterdemo.config.TwitterRun;
+import com.getir.twitterdemo.config.TwitterService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +13,6 @@ public class TwitterController {
     @GetMapping("/{arg},{WOEID}")
     public String getSegmentByCity(@PathVariable String arg, int WOEID) {
         //localhost:8080/twitter/{getir},{23424969}
-        return TwitterRun.execute(arg,WOEID);
+        return TwitterService.execute(arg,WOEID);
     }
 }
