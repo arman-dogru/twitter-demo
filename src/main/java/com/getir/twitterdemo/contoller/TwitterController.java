@@ -23,6 +23,7 @@ public class TwitterController {
         try {
             InputStream input = new FileInputStream("src/main/resources/application.properties");
             Properties prop = new Properties();
+            prop.load(new FileInputStream("src/main/resources/application.properties"));
             TwitterEngine twitter = new TwitterEngine(prop.getProperty("consumerKey"), prop.getProperty("consumerSecret"), prop.getProperty("accessToken"), prop.getProperty("tokenSecret"));
             TrendData trendData = twitter.searchTrend(arg, WOEID);
             return "Topic searched: " + trendData.getTrendName() + " || Currently trending: " + trendData.isTrending() + " || Tweet volume of the Trend: " + trendData.getTweetVolume();
