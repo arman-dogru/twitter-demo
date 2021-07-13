@@ -9,5 +9,4 @@ public class TwitterDemo {
     public static void main(String[] args) {
         SpringApplication.run(TwitterDemo.class, args);
     }
-
 }
