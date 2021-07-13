@@ -6,10 +6,12 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
 
-@Builder
-public class TwitterService {
 
-    public static String execute(String arg, int WOEID){
+public class TwitterService implements Service {
+
+    public TwitterService(){}
+
+    public String execute(String arg, int WOEID){
         try {
             InputStream input = new FileInputStream("src/main/resources/application.properties");
             Properties prop = new Properties();
