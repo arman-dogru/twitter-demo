@@ -1,5 +1,4 @@
 package com.getir.twitterdemo.config;
-import com.getir.twitterdemo.model.TrendData;
 
 import twitter4j.Trend;
 import twitter4j.*;
@@ -33,11 +32,11 @@ public class TwitterEngine {
 
         Trend temp = trendList.stream().filter(trend -> trendName.equalsIgnoreCase(trend.getName())).findFirst().orElse(null);
         if (temp != null){
-            TrendData trendData = new TrendData(temp);
+            TrendData trendData = new TrendData(temp.getName(),temp.getTweetVolume(),true);
             return trendData;
         }
 
-        TrendData trendData = new TrendData(trendName);
+        TrendData trendData = new TrendData(trendName,0,false);
         return trendData;
     }
 }
