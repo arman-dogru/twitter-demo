@@ -1,4 +1,4 @@
-package com.getir.twitterdemo.config;
+package com.getir.twitterdemo.core;
 
 import twitter4j.Trend;
 import twitter4j.*;

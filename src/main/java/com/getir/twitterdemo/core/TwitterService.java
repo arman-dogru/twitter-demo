@@ -1,4 +1,4 @@
-package com.getir.twitterdemo.config;
+package com.getir.twitterdemo.core;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

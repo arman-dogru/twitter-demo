@@ -1,4 +1,4 @@
-package com.getir.twitterdemo.config;
+package com.getir.twitterdemo.core;
 
 import lombok.Builder;
 import lombok.Data;
