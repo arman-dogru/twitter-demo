@@ -32,11 +32,8 @@ public class TwitterEngine {
 
         Trend temp = trendList.stream().filter(trend -> trendName.equalsIgnoreCase(trend.getName())).findFirst().orElse(null);
         if (temp != null){
-            TrendData trendData = new TrendData(temp.getName(),temp.getTweetVolume(),true);
-            return trendData;
+            return new TrendData(temp.getName(),temp.getTweetVolume(),true);
         }
-
-        TrendData trendData = new TrendData(trendName,0,false);
-        return trendData;
+        return new TrendData(trendName,0,false);
     }
 }
